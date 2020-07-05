@@ -23,7 +23,7 @@ function Flight(name, seats, businessSeats, registrationStarts, registrationEnds
         /**
          * @type {Ticket}
          */
-        const ticket = new Ticket(id, this.name, buyTime, fullName, null, type, seat);
+        const ticket = new Ticket(id, this.name, buyTime, fullName, "Not registered", type, seat);
 
         this.tickets.push(ticket);
 

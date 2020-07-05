@@ -10,6 +10,7 @@ form.addEventListener('submit', submitHandler);
 function submitHandler(event) {
     // прерываем всплытие что бы форма не отправлялась
     event.preventDefault();
+    let registrationTime = Date.now();
 
     const formData = {
         ticket: form.elements.ticket.value,
@@ -17,7 +18,7 @@ function submitHandler(event) {
     };
 
     try {
-        world.eRegistration(world.flights, formData.ticket, formData.fullName);
+        world.eRegistration(world.flights, formData.ticket, formData.fullName, registrationTime);
         alert('You successfully registered');
     } catch (error) {
         console.error(error);

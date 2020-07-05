@@ -8,6 +8,7 @@ function replaceDataField(element, data) {
         throw new Error('element must be HTMLElement');
 
     if (element.dataset) {
+        // debugger;
         const field = element.dataset.field;
         console.log(field, element);
         if (field) {

@@ -4,12 +4,17 @@ class Class {
     constructor(group, date) {
         this.group = group;
         this.date = date;
-        this.frosenPresentArray = JSON.stringify(this.group.presentStudents());
+        this._frosenAbsentArray = [...this.group.absentStudents()];
+        this._frosenPresentArray = [...this.group.presentStudents()];
     }
 
 
     get listOfPresent() {
-        return JSON.parse(this.frosenPresentArray);
+        return this._frosenPresentArray;
+    }
+
+    get listOfAbsent() {
+        return this._frosenAbsentArray;
     }
 
     get numberOfPresent() {
