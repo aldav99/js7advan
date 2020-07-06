@@ -10,11 +10,11 @@ class Class {
 
 
     get listOfPresent() {
-        return this._frosenPresentArray;
+        return [...this._frosenPresentArray];
     }
 
     get listOfAbsent() {
-        return this._frosenAbsentArray;
+        return [...this._frosenAbsentArray];
     }
 
     get numberOfPresent() {
